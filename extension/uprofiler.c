@@ -37,6 +37,10 @@
 #include "main/SAPI.h"
 #endif
 
+#ifndef PHP_FE_END
+#define PHP_FE_END {NULL, NULL, NULL}
+#endif
+
 /* {{{ arginfo */
 ZEND_BEGIN_ARG_INFO_EX(arginfo_uprofiler_enable, 0, 0, 0)
   ZEND_ARG_INFO(0, flags)
